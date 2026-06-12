@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #F7F5F2; --white: #FFFFFF; --dark: #1C1C1E; --mid: #3A3A3C;
+  --muted: #8E8E93; --border: #E5E2DC; --orange: #E8620A;
+  --orange2: #FF8040; --sand: #EDE8E0; --green: #2D6A4F;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Geologica', sans-serif;
+  background: #F7F5F2;
+  color: #1C1C1E;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #F7F5F2; }
+::-webkit-scrollbar-thumb { background: #E8620A; border-radius: 2px; }
+
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .65s ease, transform .65s ease; }
+.reveal.vis { opacity: 1; transform: translateY(0); }
+
+@keyframes heroLeft { from { opacity:0; transform:translateX(-24px); } to { opacity:1; transform:translateX(0); } }
+
+.hero-left > * { animation: heroLeft .8s ease both; }
+.hero-left > *:nth-child(2) { animation-delay: .1s; }
+.hero-left > *:nth-child(3) { animation-delay: .2s; }
+.hero-left > *:nth-child(4) { animation-delay: .3s; }
+.hero-left > *:nth-child(5) { animation-delay: .4s; }
+
+.pcard { position: relative; overflow: hidden; }
+.pcard::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, #E8620A, #FF8040);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .4s;
+}
+.pcard:hover::after { transform: scaleX(1); }
