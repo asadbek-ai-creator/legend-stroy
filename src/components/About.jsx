@@ -7,7 +7,7 @@ const listItems = [
   { num: '04', title: 'Оптовые условия', desc: 'Специальные цены и отсрочка для строительных компаний' },
 ]
 
-function RevealDiv({ children, style }) {
+function RevealDiv({ children, style, className }) {
   const ref = useRef(null)
   const [vis, setVis] = useState(false)
   useEffect(() => {
@@ -15,21 +15,21 @@ function RevealDiv({ children, style }) {
     if (ref.current) obs.observe(ref.current)
     return () => obs.disconnect()
   }, [])
-  return <div ref={ref} className="reveal" style={vis ? { ...style, opacity: 1, transform: 'translateY(0)' } : style}>{children}</div>
+  return <div ref={ref} className={`reveal${className ? ' ' + className : ''}`} style={vis ? { ...style, opacity: 1, transform: 'translateY(0)' } : style}>{children}</div>
 }
 
 export default function About() {
   return (
-    <section id="about" style={{ padding: '100px 56px', background: '#1C1C1E', position: 'relative', overflow: 'hidden' }}>
+    <section id="about" className="about-section">
       <div style={{ position: 'absolute', top: -100, right: -100, width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(232,98,10,.12), transparent 70%)', pointerEvents: 'none' }}></div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center', position: 'relative', zIndex: 1 }}>
+      <div className="about-grid">
         <RevealDiv>
           <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#E8620A', display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20 }}>
             <span style={{ width: 24, height: 2, background: '#E8620A', display: 'inline-block' }}></span>
             О компании
           </div>
-          <h2 style={{ fontFamily: "'Unbounded', sans-serif", fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 800, letterSpacing: '-1.5px', color: '#fff', lineHeight: 1.05, marginBottom: 24 }}>
+          <h2 className="text-fluid-h2" style={{ fontFamily: "'Unbounded', sans-serif", fontWeight: 800, letterSpacing: '-1.5px', color: '#fff', lineHeight: 1.05, marginBottom: 24 }}>
             МЫ СТРОИМ<em style={{ color: '#E8620A', fontStyle: 'normal', display: 'block' }}>ВАШЕ ДОВЕРИЕ</em>
           </h2>
           <p style={{ fontSize: 15, color: 'rgba(255,255,255,.5)', lineHeight: 1.85, fontWeight: 300, marginBottom: 18, maxWidth: 440 }}>
@@ -52,29 +52,32 @@ export default function About() {
         </RevealDiv>
 
         <RevealDiv>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: 'auto auto', gap: 16 }}>
-            <div style={{ borderRadius: 14, padding: 28, background: '#E8620A', gridColumn: '1 / 3', transition: 'transform .3s', cursor: 'default' }}
+          <div className="about-stats-grid">
+            {/* Full width — Склад */}
+            <div className="about-stat-full"
               onMouseEnter={e => e.currentTarget.style.transform='translateY(-4px)'}
               onMouseLeave={e => e.currentTarget.style.transform='translateY(0)'}
             >
               <div style={{ fontSize: 10, fontWeight: 600, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 10, color: 'rgba(255,255,255,.65)' }}>Склад</div>
-              <div style={{ fontFamily: "'Unbounded', sans-serif", fontSize: 48, fontWeight: 800, lineHeight: 1, color: '#fff' }}>10 000</div>
+              <div className="about-stat-num" style={{ fontSize: 48, color: '#fff' }}>10 000</div>
               <div style={{ fontSize: 13, marginTop: 6, lineHeight: 1.5, color: 'rgba(255,255,255,.6)' }}>м² — постоянное наличие всех позиций</div>
             </div>
+            {/* Товаров */}
             <div style={{ borderRadius: 14, padding: 28, background: 'rgba(255,255,255,.05)', border: '1px solid rgba(255,255,255,.08)', transition: 'transform .3s', cursor: 'default' }}
               onMouseEnter={e => e.currentTarget.style.transform='translateY(-4px)'}
               onMouseLeave={e => e.currentTarget.style.transform='translateY(0)'}
             >
               <div style={{ fontSize: 10, fontWeight: 600, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 10, color: 'rgba(255,255,255,.35)' }}>Товаров</div>
-              <div style={{ fontFamily: "'Unbounded', sans-serif", fontSize: 48, fontWeight: 800, lineHeight: 1, color: '#fff' }}>1000+</div>
+              <div className="about-stat-num" style={{ fontSize: 48, color: '#fff' }}>1000+</div>
               <div style={{ fontSize: 13, marginTop: 6, lineHeight: 1.5, color: 'rgba(255,255,255,.4)' }}>позиций в наличии</div>
             </div>
+            {/* Доставка */}
             <div style={{ borderRadius: 14, padding: 28, background: 'transparent', border: '1px solid rgba(255,255,255,.1)', transition: 'transform .3s', cursor: 'default' }}
               onMouseEnter={e => e.currentTarget.style.transform='translateY(-4px)'}
               onMouseLeave={e => e.currentTarget.style.transform='translateY(0)'}
             >
               <div style={{ fontSize: 10, fontWeight: 600, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 10, color: 'rgba(255,255,255,.35)' }}>Доставка</div>
-              <div style={{ fontFamily: "'Unbounded', sans-serif", fontSize: 48, fontWeight: 800, lineHeight: 1, color: '#E8620A' }}>1 день</div>
+              <div className="about-stat-num" style={{ fontSize: 48, color: '#E8620A' }}>1 день</div>
               <div style={{ fontSize: 13, marginTop: 6, lineHeight: 1.5, color: 'rgba(255,255,255,.4)' }}>минимальный срок по городу</div>
             </div>
           </div>
