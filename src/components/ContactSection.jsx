@@ -86,8 +86,6 @@ export default function ContactSection() {
               <option>Кладочные материалы</option>
               <option>Гидроизоляция</option>
               <option>Крепёж и метизы</option>
-              <option>Пиломатериалы</option>
-              <option>Инструменты</option>
               <option>Общий вопрос</option>
             </select>
           </div>

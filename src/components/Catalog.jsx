@@ -6,8 +6,6 @@ const categories = [
   { id: 'masonry', label: 'Кладочные материалы' },
   { id: 'hydro', label: 'Гидроизоляция' },
   { id: 'fastener', label: 'Крепёж и метизы' },
-  { id: 'wood', label: 'Пиломатериалы' },
-  { id: 'tools', label: 'Инструменты' },
 ]
 
 const products = [
