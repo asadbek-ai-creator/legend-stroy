@@ -7,10 +7,9 @@ const features = [
 
 export default function FeaturesStrip() {
   return (
-    <div style={{ background: '#1C1C1E', display: 'grid', gridTemplateColumns: 'repeat(4,1fr)' }}>
+    <div className="feature-strip">
       {features.map((f, i) => (
-        <div key={i}
-          style={{ padding: '36px 40px', borderRight: i < features.length - 1 ? '1px solid rgba(255,255,255,.06)' : 'none', transition: 'background .2s' }}
+        <div key={i} className="feature-card"
           onMouseEnter={e => e.currentTarget.style.background='rgba(255,255,255,.03)'}
           onMouseLeave={e => e.currentTarget.style.background='transparent'}
         >

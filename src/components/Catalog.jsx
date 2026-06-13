@@ -85,14 +85,14 @@ export default function Catalog() {
   const filtered = activeCat === 'all' ? products : products.filter(p => p.cat === activeCat)
 
   return (
-    <section id="catalog" style={{ padding: '100px 56px' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 48 }}>
+    <section id="catalog" className="section-padding">
+      <div className="catalog-header">
         <div>
           <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#E8620A', display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
             <span style={{ width: 24, height: 2, background: '#E8620A', display: 'inline-block' }}></span>
             Наши товары
           </div>
-          <h2 style={{ fontFamily: "'Unbounded', sans-serif", fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 800, letterSpacing: '-1.5px', color: '#1C1C1E', lineHeight: 1.05 }}>
+          <h2 className="text-fluid-h2" style={{ fontFamily: "'Unbounded', sans-serif", fontWeight: 800, letterSpacing: '-1.5px', color: '#1C1C1E', lineHeight: 1.05 }}>
             КАТАЛОГ<br/>ПРОДУКЦИИ
           </h2>
         </div>
@@ -117,7 +117,7 @@ export default function Catalog() {
         ))}
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20 }}>
+      <div className="grid-4">
         {filtered.map((product, i) => (
           <ProductCard key={`${product.cat}-${i}`} product={product} />
         ))}

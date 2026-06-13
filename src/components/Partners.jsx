@@ -50,14 +50,14 @@ export default function Partners() {
   }, [])
 
   return (
-    <section id="partners" style={{ padding: '100px 56px', background: '#F7F5F2' }}>
-      <div ref={headRef} className="reveal" style={headVis ? { opacity: 1, transform: 'translateY(0)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'end', marginBottom: 64 } : { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'end', marginBottom: 64 }}>
+    <section id="partners" className="section-padding" style={{ background: '#F7F5F2' }}>
+      <div ref={headRef} className={`partners-head reveal${headVis ? ' vis' : ''}`}>
         <div>
           <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#E8620A', display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
             <span style={{ width: 24, height: 2, background: '#E8620A', display: 'inline-block' }}></span>
             Партнёры
           </div>
-          <h2 style={{ fontFamily: "'Unbounded', sans-serif", fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 800, letterSpacing: '-1.5px', color: '#1C1C1E', lineHeight: 1.05 }}>
+          <h2 className="text-fluid-h2" style={{ fontFamily: "'Unbounded', sans-serif", fontWeight: 800, letterSpacing: '-1.5px', color: '#1C1C1E', lineHeight: 1.05 }}>
             НАДЁЖНЫЕ<em style={{ color: '#E8620A', fontStyle: 'normal', display: 'block' }}>ПАРТНЁРЫ</em>
           </h2>
         </div>
@@ -66,7 +66,7 @@ export default function Partners() {
         </p>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
+      <div className="grid-3">
         {partners.map(p => <PartnerCard key={p.name} partner={p} />)}
       </div>
     </section>

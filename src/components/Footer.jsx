@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <>
-      <footer style={{ background: '#1C1C1E', padding: '64px 56px 0', display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr 1fr', gap: 48 }}>
+      <footer className="footer-grid">
         <div>
           <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
             <div style={{ width: 40, height: 40, background: '#E8620A', borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Unbounded', sans-serif", fontSize: 14, fontWeight: 900, color: '#fff', letterSpacing: '-1px' }}>LS</div>
@@ -35,7 +35,7 @@ export default function Footer() {
           </div>
         ))}
       </footer>
-      <div style={{ background: '#1C1C1E', borderTop: '1px solid rgba(255,255,255,.06)', padding: '20px 56px', marginTop: 56, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div className="footer-bottom">
         <p style={{ fontSize: 12, color: 'rgba(255,255,255,.2)' }}>© 2025 <em style={{ color: '#E8620A', fontStyle: 'normal' }}>Legend Stroy</em>. Все права защищены.</p>
         <p style={{ fontSize: 12, color: 'rgba(255,255,255,.2)' }}>Строительные материалы — Нукус</p>
       </div>

@@ -7,14 +7,14 @@ export default function Hero() {
   ]
 
   return (
-    <section style={{ minHeight: '100vh', display: 'grid', gridTemplateColumns: '1fr 1fr', paddingTop: 80, overflow: 'hidden', position: 'relative', background: '#F7F5F2' }}>
-      <div className="hero-left" style={{ padding: '80px 56px', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', zIndex: 2 }}>
+    <section className="grid-2-hero" style={{ paddingTop: 80, overflow: 'hidden', position: 'relative', background: '#F7F5F2' }}>
+      <div className="hero-left section-padding" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', zIndex: 2 }}>
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 11, fontWeight: 600, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#E8620A', marginBottom: 28 }}>
           <span style={{ width: 24, height: 2, background: '#E8620A', display: 'inline-block' }}></span>
           Строительные материалы
         </div>
 
-        <h1 style={{ fontFamily: "'Unbounded', sans-serif", fontSize: 'clamp(42px, 4.5vw, 68px)', fontWeight: 900, lineHeight: 1.05, letterSpacing: '-2px', color: '#1C1C1E', marginBottom: 24 }}>
+        <h1 className="text-fluid-h1" style={{ fontFamily: "'Unbounded', sans-serif", fontWeight: 900, lineHeight: 1.05, letterSpacing: '-2px', color: '#1C1C1E', marginBottom: 24 }}>
           ВСЁ ДЛЯ
           <em style={{ color: '#E8620A', fontStyle: 'normal', display: 'block' }}>ВАШЕЙ СТРОЙКИ</em>
         </h1>
@@ -36,7 +36,7 @@ export default function Hero() {
           >Связаться с нами</a>
         </div>
 
-        <div style={{ display: 'flex', gap: 40, marginTop: 64, paddingTop: 40, borderTop: '1px solid #E5E2DC' }}>
+        <div className="hero-stats">
           {[['1000','Товаров в наличии',true],['10','Лет на рынке',false],['500','Клиентов',true]].map(([val, lbl, hasSup]) => (
             <div key={lbl}>
               <div style={{ fontFamily: "'Unbounded', sans-serif", fontSize: 30, fontWeight: 700, color: '#1C1C1E', lineHeight: 1 }}>

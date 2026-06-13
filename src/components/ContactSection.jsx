@@ -31,8 +31,8 @@ export default function ContactSection() {
   const handleBlur = e => { e.target.style.borderColor = '#E5E2DC'; e.target.style.boxShadow = 'none' }
 
   return (
-    <section id="contact" style={{ padding: '100px 56px', background: '#EDE8E0' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'start' }}>
+    <section id="contact" className="section-padding" style={{ background: '#EDE8E0' }}>
+      <div className="contact-grid">
         <RevealDiv>
           <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#E8620A', display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
             <span style={{ width: 24, height: 2, background: '#E8620A', display: 'inline-block' }}></span>
@@ -62,7 +62,7 @@ export default function ContactSection() {
         <RevealDiv style={{ background: '#fff', borderRadius: 16, padding: 40, boxShadow: '0 8px 40px rgba(28,28,30,.08)' }}>
           <h3 style={{ fontFamily: "'Unbounded', sans-serif", fontSize: 18, fontWeight: 700, color: '#1C1C1E', letterSpacing: '-0.5px', marginBottom: 28 }}>Написать нам</h3>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 16 }}>
+          <div className="form-2col">
             <div>
               <label style={{ display: 'block', fontSize: 11, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#8E8E93', marginBottom: 7 }}>Имя</label>
               <input type="text" placeholder="Ваше имя" style={inputStyle} onFocus={handleFocus} onBlur={handleBlur} />
