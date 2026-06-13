@@ -7,7 +7,7 @@ export default function Footer() {
             <div style={{ width: 40, height: 40, background: '#E8620A', borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Unbounded', sans-serif", fontSize: 14, fontWeight: 900, color: '#fff', letterSpacing: '-1px' }}>LS</div>
             <div style={{ fontFamily: "'Unbounded', sans-serif", fontSize: 15, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px', lineHeight: 1.1 }}>
               Legend Stroy
-              <span style={{ color: '#E8620A', display: 'block', fontSize: 10, fontWeight: 400, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Qurilis materiallari</span>
+              <span style={{ color: '#E8620A', display: 'block', fontSize: 10, fontWeight: 400, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Строительные материалы</span>
             </div>
           </a>
           <p style={{ marginTop: 14, fontSize: 13, color: 'rgba(255,255,255,.3)', lineHeight: 1.8, maxWidth: 260 }}>
@@ -18,7 +18,7 @@ export default function Footer() {
         {[
           { title: 'Навигация', links: [['#catalog','Каталог'],['#about','О компании'],['#partners','Партнёры'],['#contact','Контакты']] },
           { title: 'Категории', links: [['#catalog','Краски и покрытия'],['#catalog','Кладочные материалы'],['#catalog','Гидроизоляция'],['#catalog','Крепёж и метизы'],['#catalog','Пиломатериалы'],['#catalog','Инструменты']] },
-          { title: 'Контакты', links: [['tel:+998913034777','+998 (91) 303-47-77'],['mailto:linad-nukus@mail.ru','linad-nukus@mail.ru'],['#',"No'kis qalasi, 60 jillig'i ko'shesi 17/1"],['#','Пн–Вс: 09:00 — 18:00']] },
+          { title: 'Контакты', links: [['tel:+998913034777','+998 (91) 303-47-77'],['mailto:linad-nukus@mail.ru','linad-nukus@mail.ru'],['#',"г. Нукус, ул. 60-летия Каракалпакстана, 17/1"],['#','Пн–Вс: 09:00 — 18:00']] },
         ].map(col => (
           <div key={col.title}>
             <h4 style={{ fontSize: 10, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', color: 'rgba(255,255,255,.25)', marginBottom: 18 }}>{col.title}</h4>

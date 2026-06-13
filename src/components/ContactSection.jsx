@@ -48,7 +48,7 @@ export default function ContactSection() {
             {[
               ['Телефон', <a href="tel:+998913034777" style={{ color: '#1C1C1E', textDecoration: 'none' }} onMouseEnter={e=>e.target.style.color='#E8620A'} onMouseLeave={e=>e.target.style.color='#1C1C1E'}>+998 (91) 303-47-77</a>],
               ['Email', <a href="mailto:linad-nukus@mail.ru" style={{ color: '#1C1C1E', textDecoration: 'none' }} onMouseEnter={e=>e.target.style.color='#E8620A'} onMouseLeave={e=>e.target.style.color='#1C1C1E'}>linad-nukus@mail.ru</a>],
-              ['Адрес', "No'kis qalasi, Qaraqalpaqstannin' 60 jillig'i ko'shesi 17/1"],
+              ['Адрес', "г. Нукус, ул. 60-летия Каракалпакстана, 17/1"],
               ['Режим', 'Пн–Вс: 09:00 — 18:00'],
             ].map(([key, val], i) => (
               <div key={key} style={{ display: 'flex', gap: 16, padding: '16px 0', borderBottom: '1px solid rgba(28,28,30,.1)', borderTop: i === 0 ? '1px solid rgba(28,28,30,.1)' : 'none' }}>

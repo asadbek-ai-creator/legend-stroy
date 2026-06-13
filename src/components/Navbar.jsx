@@ -31,7 +31,7 @@ export default function Navbar() {
         <div style={{ fontFamily: "'Unbounded', sans-serif", fontSize: 15, fontWeight: 700, color: '#1C1C1E', letterSpacing: '-0.3px', lineHeight: 1.1 }}>
           Legend Stroy
           <span style={{ color: '#E8620A', display: 'block', fontSize: 10, fontWeight: 400, letterSpacing: '1.5px', textTransform: 'uppercase' }}>
-            Qurilis materiallari
+            Строительные материалы
           </span>
         </div>
       </a>

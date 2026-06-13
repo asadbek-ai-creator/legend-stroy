@@ -1,9 +1,9 @@
 export default function Hero() {
   const images = [
-    { src: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&q=80', label: 'Краски', badge: 'В наличии' },
-    { src: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80', label: 'Кирпич' },
-    { src: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80', label: 'Инструменты' },
-    { src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80', label: 'Отделка', badge: 'Новинки' },
+    { src: 'https://plus.unsplash.com/premium_photo-1678812165213-12dc8d1f3e19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MXx8cGFpbnQlMjBidWNrZXRzfGVufDB8fHx8MTc4MTM0MTUwNnww&ixlib=rb-4.1.0&q=80&w=600', label: 'Краски', badge: 'В наличии' },
+    { src: 'https://plus.unsplash.com/premium_photo-1675103339078-88b54e155e71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MXx8YnJpY2tzfGVufDB8fHx8MTc4MTM0MTUwNnww&ixlib=rb-4.1.0&q=80&w=600', label: 'Кирпич' },
+    { src: 'https://plus.unsplash.com/premium_photo-1681989490797-dbe51c438b61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MXx8Y29uc3RydWN0aW9uJTIwdG9vbHN8ZW58MHx8fHwxNzgxMzQxMzc5fDA&ixlib=rb-4.1.0&q=80&w=600', label: 'Инструменты' },
+    { src: 'https://plus.unsplash.com/premium_photo-1683140589868-4f9b38110050?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MXx8aW50ZXJpb3IlMjBmaW5pc2hpbmd8ZW58MHx8fHwxNzgxMzQxNTA2fDA&ixlib=rb-4.1.0&q=80&w=600', label: 'Отделка', badge: 'Новинки' },
   ]
 
   return (
@@ -20,7 +20,7 @@ export default function Hero() {
         </h1>
 
         <p style={{ fontSize: 16, color: '#8E8E93', lineHeight: 1.8, fontWeight: 300, maxWidth: 420, marginBottom: 48 }}>
-          Biz sizge qalegen tu'rdegi qurilis materiyallarin usinamiz.
+          Мы предлагаем вам любые виды строительных материалов.
         </p>
 
         <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
@@ -28,12 +28,12 @@ export default function Hero() {
             style={{ background: '#E8620A', color: '#fff', padding: '15px 32px', borderRadius: 10, fontSize: 14, fontWeight: 600, textDecoration: 'none', transition: 'all .25s', display: 'inline-flex', alignItems: 'center', gap: 8 }}
             onMouseEnter={e => { e.currentTarget.style.background='#FF8040'; e.currentTarget.style.transform='translateY(-2px)'; e.currentTarget.style.boxShadow='0 12px 32px rgba(232,98,10,.3)' }}
             onMouseLeave={e => { e.currentTarget.style.background='#E8620A'; e.currentTarget.style.transform='translateY(0)'; e.currentTarget.style.boxShadow='none' }}
-          >Katalogti ko'riw →</a>
+          >Смотреть каталог →</a>
           <a href="#contact"
             style={{ background: 'transparent', color: '#1C1C1E', padding: '15px 32px', borderRadius: 10, fontSize: 14, fontWeight: 600, textDecoration: 'none', transition: 'all .25s', border: '1.5px solid #E5E2DC' }}
             onMouseEnter={e => { e.currentTarget.style.borderColor='#E8620A'; e.currentTarget.style.color='#E8620A' }}
             onMouseLeave={e => { e.currentTarget.style.borderColor='#E5E2DC'; e.currentTarget.style.color='#1C1C1E' }}
-          >Bizge baylanisin'</a>
+          >Связаться с нами</a>
         </div>
 
         <div style={{ display: 'flex', gap: 40, marginTop: 64, paddingTop: 40, borderTop: '1px solid #E5E2DC' }}>
